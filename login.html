@@ -1,0 +1,150 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <style>
+      body {
+  
+    background: #fff;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+  }
+      .loggedin-div {
+    width: 20%;
+    margin: 0px auto;
+    margin-top: 150px;
+    padding: 20px;
+    
+  
+  }
+  
+  .loggedin-div button {
+    background: #5d8ffc;
+    color: #fff;
+    border: 1px solid #5d8ffc;
+    border-radius: 5px;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+  }
+  
+  .loggedin-div button:hover {
+    background: #fff;
+    color: #5d8ffc;
+    border: 1px solid #5d8ffc;
+    cursor: pointer;
+  }
+  </style>
+  
+  </head>
+  <body>
+    <div id="login_div" class="container">
+      <div  class="forms-container">
+        <div class="signin-signup">
+          <form action="#" class="sign-in-form">
+            <h2 class="title">Sign in</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="email" placeholder="Email..." id="email_field" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password..." id="password_field" />
+            </div>
+
+
+            <button onclick="login()" type="submit" class="btn solid" >Login</button>
+          </form>
+
+
+          <form action="#" class="sign-up-form">
+            <h2 class="title">Sign up</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email..." id="email_field" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password..." id="password_field" />
+            </div>
+            <button onclick="login()">Login to Account</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>New here ?</h3>
+            <p>
+              Smart Translator is the place where Deaf and Dum can communicate with Normal persons
+            </p>
+            <button class="btn transparent" id="sign-up-btn">
+              Sign up
+            </button>
+          </div>
+        </div>
+
+
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>Already Signed up?</h3>
+            <p>
+              
+            </p>
+            <button class="btn transparent" id="sign-in-btn">
+              Sign in
+            </button>
+          </div>
+          <img src="img/register.svg" class="image" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div id="user_div" class="loggedin-div">
+      <h3>Welcome User</h3><br>
+      <p id="user_para">Welcome to Smart translator. You're currently logged in.</p><br>
+      <button onclick="logout()">Logout</button>
+      <a href="chat.html"><button class="btn">Continue</button></a>
+    </div>
+
+  
+  </body>
+
+<script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-analytics.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+   var firebaseConfig = {
+    apiKey: "AIzaSyAyryTinIY5zZYFiZJmehTPWHYAUQj0uwA",
+    authDomain: "cloud-925cb.firebaseapp.com",
+    projectId: "cloud-925cb",
+    storageBucket: "cloud-925cb.appspot.com",
+    messagingSenderId: "190649938004",
+    appId: "1:190649938004:web:18837dc0670d11cca43dc1",
+    measurementId: "G-YW0P9NYCQP"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+  <script src="index.js"></script>
+  <script src='https://kit.fontawesome.com/64d58efce2.js'></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
